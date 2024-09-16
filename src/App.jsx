@@ -6,9 +6,9 @@ import Services from "./components/Services/Services"
 import Stores from "./components/Stores/Stores"
 import Testimonial from "./components/Testimonial/Testimonial"
 
-function App() {
+const App = () => {
   return (
-    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-hidden">
+    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
       <Navbar />
       <Hero />
       <Services />
@@ -17,7 +17,7 @@ function App() {
       <Testimonial />
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
