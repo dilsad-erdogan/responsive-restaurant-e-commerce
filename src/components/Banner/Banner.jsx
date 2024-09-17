@@ -23,7 +23,7 @@ const Banner = () => {
             <FaCarSide></FaCarSide>
           </div>
         </div>
-        <Button text={"Order"} bgColor={"bg-yellow-400"} textColor={"text-white"}/>
+        <Button text={"Order Now"} bgColor={"bg-yellow-400"} textColor={"text-white"}/>
       </div>
     </div>
   )
