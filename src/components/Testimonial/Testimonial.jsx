@@ -37,7 +37,7 @@ const Testimonial = () => {
   };
 
   return (
-    <div className="container justify-center items-center m-8">
+    <div className="justify-center items-center m-8">
       <Heading firsttitle={"What our customers say"} title={"Testimonial"} subtitle={"Lorem ipsum dolor, sit amet consectetur adipising elit. Perspiciatis delectus architecto error nesciunt."}/>
 
       <div className="overflow-hidden rounded-3xl min-w-[300px] max-w-[500px] sm:min-w-[400px] flex justify-center items-center bg-yellow-100">
