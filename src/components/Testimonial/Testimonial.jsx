@@ -1,64 +1,69 @@
-import Heading from "../Shared/Heading"
-import image from "../../assets/biryani3.png";
 import Slider from "react-slick";
 
-const TestimonialData = [
+const testimonialData = [
   {
     id: 1,
-    img: image,
-    title: "Lorem ipsum dolor, sit amet consectetur adipising elit. Perspiciatis delectus architecto error nesciunt.",
-    name: "Dilsad",
+    name: "Dilşad",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    img: "https://picsum.photos/101/101",
   },
   {
     id: 2,
-    img: image,
-    title: "Lorem ipsum dolor, sit amet consectetur adipising elit. Perspiciatis delectus architecto error nesciunt.",
     name: "Rukiye",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    img: "https://picsum.photos/102/102",
   },
   {
     id: 3,
-    img: image,
-    title: "Lorem ipsum dolor, sit amet consectetur adipising elit. Perspiciatis delectus architecto error nesciunt.",
     name: "Erdoğan",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    img: "https://picsum.photos/103/103",
   },
 ];
 
 const Testimonial = () => {
-  const settings = {
-    dots: false,
+  var settings = {
+    dots: true,
     arrows: false,
     infinite: true,
-    speed: 800,
+    speed: 500,
+    slidesToShow: 1,
     slidesToScroll: 1,
-    autoplaySpeed: 4000,
-    cssEase: "ease-in-out",
-    pauseOnHover: false,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+    pauseOnHover: true,
     pauseOnFocus: true,
   };
 
   return (
-    <div className="justify-center items-center m-8">
-      <Heading firsttitle={"What our customers say"} title={"Testimonial"} subtitle={"Lorem ipsum dolor, sit amet consectetur adipising elit. Perspiciatis delectus architecto error nesciunt."}/>
+    <>
+      <div data-aos="fade-up" data-aos-duration="300" className="py-10">
+        <div className="py-5">
+          <div className="text-center mb-20 max-w-[400px] mx-auto">
+            <h1 className="text-3xl font-bold">Testimonial</h1>
+            <p className="text-xs text-gray-400 pt-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis delectus architecto error nesciunt.</p>
+          </div>
 
-      <div className="overflow-hidden rounded-3xl min-w-[300px] max-w-[500px] sm:min-w-[400px] flex justify-center items-center bg-yellow-100">
-        <div className="container pb-8 sm:pb-0">
-          <Slider {...settings}>
-            {TestimonialData.map((data) => (
-              <div key={data.id}>
-                <div className="justify-center items-center m-6">
-                  <div className="flex flex-col justify-center items-center gap-4 sm:pl-3 pt-12 sm:pt-0 text-center sm:text-left order-2 sm:order-1 relative z-10">
-                    <img src={data.img} alt="" className="max-h-[8rem] max-w-[8rem] rounded-full" />
-                    <p className="text-xs text-center">{data.title}</p>
-                    <h1 className="text-2xl font-bold">{data.name}</h1>
+          <div className="grid grid-cols-1 max-w-[600px] mx-auto gap-6">
+            <Slider {...settings}>
+              {testimonialData.map((data) => {
+                return (
+                  <div className="my-6" key={data.id}>
+                    <div key={data.id} className="flex flex-col justify-center items-center gap-4 text-center   shadow-lg p-4 mx-4 rounded-xl dark:bg-gray-800 bg-primary/10 relative">
+                      <img className="rounded-full block mx-auto" src={data.img} alt="" />
+                      <p className="text-gray-500 text-sm">{data.text}</p>
+                      <h1 className="text-xl font-bold">{data.name}</h1>
+                    </div>
                   </div>
-                </div>
-              </div>
-            ))}
-          </Slider>
+                );
+              })}
+            </Slider>
+          </div>
         </div>
       </div>
-    </div>
-  )
-}
+    </>
+  );
+};
 
-export default Testimonial
+export default Testimonial;

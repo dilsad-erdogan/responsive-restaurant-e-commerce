@@ -1,5 +1,4 @@
 import logo from "../../assets/food-logo.png";
-import Button from "../Shared/Button";
 import DarkMode from "./DarkMode";
 
 const MenuLinks = [
@@ -23,7 +22,7 @@ const MenuLinks = [
 const Navbar = () => {
   return (
     <div className="bg-white dark:bg-gray-900 dark:text-white duration-200 relative z-40">
-      <div className="py-4">
+      <div className="py-3">
         <div className="container flex justify-between items-center">
           {/* Logo Section */}
           <div className="flex items-center px-5">
@@ -53,7 +52,7 @@ const Navbar = () => {
             </div>
 
             {/* Button section */}
-            <Button text={"Order"} bgColor={"bg-yellow-400"} textColor={"text-white"}/>
+            <button className="bg-gradient-to-r bg-yellow-400 to-secondary hover:scale-105 duration-200 text-white py-1 px-4 rounded-full flex items-center gap-3"> Order</button>
           </div>
         </div>
       </div>
